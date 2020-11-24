@@ -15,7 +15,8 @@ echo $OUT2
 # create directory if necessary
 mkdir -p $(dirname $OUT2)
 
-STYLE=$(realpath --relative-to=$(dirname ${OUT2}) $(pwd))/style.css
+TOP=$(realpath --relative-to=$(dirname ${OUT2}) $(pwd))
+STYLE=${TOP}/style.css
 
 # prepend header
 cat > ${OUT2} << EOF
@@ -23,8 +24,11 @@ cat > ${OUT2} << EOF
 <html>
 <link rel=stylesheet type="text/css" href="${STYLE}">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <body>
+<img class="lede" src="${TOP}/lede00.jpg"/>
+<a href="${TOP}/readme.html">home</a>
 EOF
 
 # run through markdown
