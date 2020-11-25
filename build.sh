@@ -22,13 +22,15 @@ STYLE=${TOP}/style.css
 cat > ${OUT2} << EOF
 <!DOCTYPE html>
 <html>
-<link rel=stylesheet type="text/css" href="${STYLE}">
 <head>
+<link rel=stylesheet type="text/css" href="${STYLE}">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <body>
-<img class="lede" src="${TOP}/lede00.jpg"/>
-<a href="${TOP}/readme.html">home</a>
+<div class="lede" style="background-image:url('${TOP}/lede00.jpg')"></div>
+<div class="ledespace"></div>
+<div class="body">
+<a href="${TOP}/readme.html">home</a> | <a href="https://github.com/hanatos/vkdt">git</a>
 EOF
 
 # run through markdown
@@ -36,6 +38,7 @@ markdown ${file} >> ${OUT2}
 
 # append footer
 cat >> ${OUT2} << EOF
+</div>
 </body>
 </html>
 EOF
