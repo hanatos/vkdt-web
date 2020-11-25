@@ -28,6 +28,11 @@ cat > ${OUT2} << EOF
 </head>
 <body>
 <div class="lede" style="background-image:url('${TOP}/lede00.jpg')"></div>
+<div class="nav">
+<a href="#">top</a><br/>
+<a href="${TOP}/readme.html">home</a><br/>
+<a href="https://github.com/hanatos/vkdt">git</a><br/>
+</div>
 <div class="ledespace"></div>
 <div class="body">
 <a href="${TOP}/readme.html">home</a> | <a href="https://github.com/hanatos/vkdt">git</a>

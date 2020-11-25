@@ -1,9 +1,10 @@
 html {
   background-color:#111111;
 }
+
 .body {
-  font-family:verdana,helvetica,arial,sans-serif; font-size: 8pt;
-  font-size:15pt;
+  font-family:verdana,helvetica,arial,sans-serif;
+  font-size:12pt;
   max-width:50em;
   margin-left:auto;
   margin-right:auto;
@@ -22,9 +23,10 @@ html {
   max-width:50em;
   max-height:50vh;
   height:24em;
+  z-index:-2;
 }
 
-.title{
+.title {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50pt;
@@ -34,21 +36,6 @@ html {
   padding: 0pt;
   font-weight:bold;
   font-size:20pt;
-  width: 800px; /* width of page + padding. */
-}
-
-table {
-  width:800px;
-  font-size:15pt;
-  font-family:sans;
-  margin-left:auto;
-  margin-right:auto;
-  padding:20px;
-  background-color:#444444;
-  color:#bbbbbb;
-  border-style:solid;
-  border-width:thin;
-  border-color:#666666;
 }
 
 a {
@@ -68,8 +55,26 @@ img {
   width:50%;
 }
 
+code {
+  font-family:monospace;
+  font-size:12pt;
+  white-space:pre;
+}
+
+.nav {
+  font-family:verdana,helvetica,arial,sans-serif;
+  font-size: 12pt;
+  position: fixed;
+  top: 0%;
+  left:50%;
+  width:100%;
+  max-width:10em;
+  transform: translate(-345%,0%);
+}
+
 .lede {
-  font-family:verdana,helvetica,arial,sans-serif; font-size: 15pt;
+  font-family:verdana,helvetica,arial,sans-serif;
+  font-size: 12pt;
   max-width:70em;
   width:100%;
   height:100%;
@@ -77,9 +82,9 @@ img {
   position: fixed;
   top: 0%;
   left: 50%;
-  transform: translate(-50%,-25%);
+  transform: translate(-50%,0%);
   background-attachment:fixed;
-  background-position:center;
+  background-position:center top;
   background-repeat:no-repeat;
   background-size:contain;
 }
