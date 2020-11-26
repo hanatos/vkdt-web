@@ -3,6 +3,7 @@
 # careful with slash in the end, it won't match //ext then further down
 VKDT=../vkdt
 
+LEDE=0
 # find all md files
 for file in $(find ${VKDT} -path ${VKDT}/ext -prune -false -o -name "*.md")
 do
@@ -18,6 +19,9 @@ mkdir -p $(dirname $OUT2)
 TOP=$(realpath --relative-to=$(dirname ${OUT2}) $(pwd))
 STYLE=${TOP}/style.css
 
+LEDE=$(( (LEDE+1)%10 ))
+LIND=$(printf "%02d" $LEDE)
+
 # prepend header
 cat > ${OUT2} << EOF
 <!DOCTYPE html>
@@ -27,7 +31,7 @@ cat > ${OUT2} << EOF
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <body>
-<div class="lede" style="background-image:url('${TOP}/lede00.jpg')"></div>
+<div class="lede" style="background-image:url('${TOP}/lede${LIND}.jpg')"></div>
 <div class="nav">
 <a href="#">top</a><br/>
 <a href="${TOP}/readme.html">home</a><br/>
