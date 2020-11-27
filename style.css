@@ -1,5 +1,5 @@
 html {
-  background-color:#111111;
+  background-color:#777;
 }
 
 .body {
@@ -8,7 +8,7 @@ html {
   max-width:50em;
   margin-left:auto;
   margin-right:auto;
-  padding:1em;
+  padding:2em;
   background-color:#444444;
   color:#bbbbbb;
   border-style:solid;
@@ -65,7 +65,7 @@ code {
   font-family:verdana,helvetica,arial,sans-serif;
   font-size: 12pt;
   position: fixed;
-  top: 0%;
+  top: 2%;
   left:50%;
   width:100%;
   max-width:10em;
@@ -80,7 +80,7 @@ code {
   height:100%;
   z-index:-1;
   position: fixed;
-  top: 0%;
+  top: 2%;
   left: 50%;
   transform: translate(-50%,0%);
   background-attachment:fixed;

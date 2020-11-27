@@ -5,7 +5,7 @@ VKDT=../vkdt
 
 LEDE=0
 # find all md files
-for file in $(find ${VKDT} -path ${VKDT}/ext -prune -false -o -name "*.md")
+for file in $(find ${VKDT} -path ${VKDT}/ext -prune -false -o -name "*.md") $(find . -name "*.md")
 do
 
 OUT0=${file%.md}.html
@@ -19,7 +19,7 @@ mkdir -p $(dirname $OUT2)
 TOP=$(realpath --relative-to=$(dirname ${OUT2}) $(pwd))
 STYLE=${TOP}/style.css
 
-LEDE=$(( (LEDE+1)%10 ))
+LEDE=$(( (LEDE+1)%20 ))
 LIND=$(printf "%02d" $LEDE)
 
 # prepend header
@@ -31,15 +31,16 @@ cat > ${OUT2} << EOF
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <body>
-<div class="lede" style="background-image:url('${TOP}/lede${LIND}.jpg')"></div>
+<div class="lede" style="background-image:url('${TOP}/lede_${LIND}.jpg')"></div>
 <div class="nav">
 <a href="#">top</a><br/>
 <a href="${TOP}/readme.html">home</a><br/>
+<a href="${TOP}/index.html">about</a><br/>
 <a href="https://github.com/hanatos/vkdt">git</a><br/>
 </div>
 <div class="ledespace"></div>
 <div class="body">
-<a href="${TOP}/readme.html">home</a> | <a href="https://github.com/hanatos/vkdt">git</a>
+<a href="${TOP}/readme.html">home</a> | <a href="${TOP}/index.html">about</a> | <a href="https://github.com/hanatos/vkdt">git</a>
 EOF
 
 # run through markdown
