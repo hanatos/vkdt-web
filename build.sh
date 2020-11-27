@@ -48,6 +48,7 @@ markdown ${file} >> ${OUT2}
 
 # append footer
 cat >> ${OUT2} << EOF
+<div class="foot">$(date +"%B %Y")</div>
 </div>
 </body>
 </html>

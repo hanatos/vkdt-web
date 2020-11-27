@@ -43,3 +43,20 @@ motivation for a new core architecture:
 * animations with optional feedback loops
 * full screen colour management that supports dual monitors even when the
   window is split between the two
+
+
+## screenshots
+
+images shown here are taken from the playraw category on [pixls.us](https://pixls.us).
+
+lighttable mode:
+
+[![](img/screen-lt.jpg)](img/screen-lt.jpg)
+
+darkroom mode, showing the configurable favourites tab:
+
+[![](img/screen-dr-fav.jpg)](img/screen-dr-fav.jpg)
+
+darkroom mode, showing the node graph connections:
+
+[![](img/screen-dr-con.jpg)](img/screen-dr-con.jpg)

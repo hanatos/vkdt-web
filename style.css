@@ -16,6 +16,20 @@ html {
   border-color:#666666;
   height:100%;
   min-height:2048px;
+  position:relative;
+}
+
+.foot {
+  font-family:verdana,helvetica,arial,sans-serif;
+  font-size:10pt;
+  max-width:50em;
+  background-color:#444444;
+  padding:.5em;
+  color:#000;
+  border:none;
+  position:absolute;
+  bottom:0;
+  right:0;
 }
 
 .ledespace {
