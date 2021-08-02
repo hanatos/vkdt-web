@@ -132,14 +132,14 @@ code {
 }
 
 .compare_box textarea:nth-child(2){
-  height: 5em;
-  max-height: 40em;
+  width: 5em;
+  max-width: 100%;
   opacity: 1;
-  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
   background: no-repeat;
   background-size: fill;
   background-position: top;
-  resize: vertical;
+  resize: horizontal;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
