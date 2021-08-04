@@ -125,6 +125,8 @@ code {
   background: no-repeat;
   background-size: auto 100%;
   background-position: top left;
+  /* 'pixelated' is apparently the new (unsupported) std: */
+  image-rendering: optimizeSpeed;
   resize: none;
   outline: none;
   border: none;
@@ -142,6 +144,7 @@ code {
   background-size: auto 100%;
   background-position: top left;
   resize: horizontal;
+  image-rendering: optimizeSpeed;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
