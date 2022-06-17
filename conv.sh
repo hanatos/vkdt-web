@@ -1,29 +1,20 @@
 #!/bin/bash
 
-# careful with slash in the end, it won't match //ext then further down
-VKDT=../vkdt
+# convert one md to one html
+MD=$1
+HTML=$2
 
-LEDE=0
-# find all md files
-for file in $(find ${VKDT} -path ${VKDT}/ext -prune -false -o -name "*.md") $(find . -name "*.md")
-do
-
-OUT0=${file%.md}.html
-OUT1=${OUT0#$VKDT}
-OUT2=${OUT1#/}
-echo $OUT2
-
-# create directory if necessary
-mkdir -p $(dirname $OUT2)
-
-TOP=$(realpath --relative-to=$(dirname ${OUT2}) $(pwd))
+TOP=$(realpath --relative-to=$(dirname ${HTML}) $(pwd))
 STYLE=${TOP}/style.css
 
+LEDE=$(echo ${HTML} | sha1sum)
+LEDE=${LEDE:0:8}
+LEDE=$(( 16#${LEDE} ))
 LEDE=$(( (LEDE+1)%21 ))
 LIND=$(printf "%02d" $LEDE)
 
 # prepend header
-cat > ${OUT2} << EOF
+cat > ${HTML} << EOF
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,10 +35,10 @@ cat > ${OUT2} << EOF
 EOF
 
 # run through markdown
-markdown ${file} >> ${OUT2}
+markdown ${MD} >> ${HTML}
 
 # append footer
-cat >> ${OUT2} << EOF
+cat >> ${HTML} << EOF
 <div class="foot">$(date +"%B %Y")</div>
 </div>
 </body>
@@ -55,6 +46,4 @@ cat >> ${OUT2} << EOF
 EOF
 
 # repoint links to md to point to html now:
-sed -i -e 's/href="\(.*\).md"/href="\1.html"/g' ${OUT2}
-
-done
+sed -i -e 's/href="\(.*\).md"/href="\1.html"/g' ${HTML}
