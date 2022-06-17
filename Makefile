@@ -10,11 +10,6 @@ all: $(VKDT_HTML_FILES) $(LOCAL_HTML_FILES)
 
 VPATH=$(dir $(VKDT_MD_FILES))
 
-# %.html: $(VKDT)/%.md Makefile conv.sh
-# 	@mkdir -p "$(@D)"
-# 	@echo convert "$<" to "$@"
-# 	$(shell ./conv.sh $< $@)
-
 %.html: %.md Makefile conv.sh
 	@mkdir -p "$(@D)"
 	@echo convert local "$<" to "$@"
