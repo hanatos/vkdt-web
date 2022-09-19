@@ -1,9 +1,12 @@
 # vkdt
 
-## an experimental image processing graph
+## motivation
+
+after developing [darktable](https://darktable.org) for about ten years,
+why did i restart from a new codebase?
 
 the vkdt project addresses several shortcomings of the core
-architecture of [darktable](https://darktable.org). these points are the main
+architecture of dt. these points are the main
 motivation for a new core architecture:
 
 
@@ -33,16 +36,17 @@ motivation for a new core architecture:
 
 * full res raw processing usually faster than vsync
 * supports 10-bit displays out of the box (try this with gtk/cairo..)
-* highlight inpainting
-* interactive brush strokes with guided smoothing
+* better highlight inpainting
+* interactive brush strokes (pentablet) with guided smoothing
 * local laplacian pyramids for local contrast
 * deconvolution sharpening
 * thumbnail processing is disk i/o limited (be sure to use fast SSD where you
   can) and rawspeed limited: some raws can be decoded quicker (RAF) than
-  others (CR2).
-* animations with optional feedback loops
+  others (CR2)
+* animated graphs with optional feedback loops
 * full screen colour management that supports dual monitors even when the
   window is split between the two
+* support for raw video (mlv) and ldr video (mp4, mov)
 
 
 ## screenshots
