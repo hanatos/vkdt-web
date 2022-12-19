@@ -1,13 +1,16 @@
 # vkdt
 
-## motivation
+## a graph-based photography workflow tool
+
+![node-editor](img/screen-nodes.jpg)
+
+## how is it different to darktable?
 
 after developing [darktable](https://darktable.org) for about ten years,
 why did i restart from a new codebase?
 
-the vkdt project addresses several shortcomings of the core
-architecture of dt. these points are the main
-motivation for a new core architecture:
+the vkdt project addresses several shortcomings of the core architecture of dt.
+these points are the main motivation to start fresh:
 
 
 **developer sanity**
