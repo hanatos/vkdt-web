@@ -18,6 +18,12 @@ html {
   min-height:2048px;
   position:relative;
 }
+@media only screen and (hover: none) and (pointer: coarse) {
+.body {
+  max-width:none;
+  width:100%;
+}
+}
 
 .foot {
   font-family:verdana,helvetica,arial,sans-serif;
